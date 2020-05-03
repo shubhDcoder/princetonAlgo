@@ -1,3 +1,5 @@
+package princeton.graph.chap4_1;
+
 public class ConnectedComponents {
 
     int count;

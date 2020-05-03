@@ -1,3 +1,5 @@
+package princeton.graph.chap4_1;
+
 public class PrintUtil {
     // random utility methods
     public static final int FIXED_LEN = 135;

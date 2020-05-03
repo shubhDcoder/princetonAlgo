@@ -1,3 +1,5 @@
+package princeton.graph.chap4_1;
+
 import java.util.LinkedList;
 
 public class DepthFirstSearchPaths {

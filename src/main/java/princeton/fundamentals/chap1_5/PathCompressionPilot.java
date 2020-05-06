@@ -9,14 +9,14 @@ import java.time.Instant;
 
 import static princeton.graph.chap4_1.PrintUtil.*;
 
-public class QuickUnionPilot {
+public class PathCompressionPilot {
     public static void main(String args[]) throws IOException{
-        markHeading("UNION FIND WITH QUICK UNION IMPLEMENTATION");
+        markHeading("UNION FIND WITH PATH COMPRESSION IMPLEMENTATION");
 
         Instant start = Instant.now();
 
         BufferedReader reader = new BufferedReader(new FileReader(new File(args[0])));
-        QuickUnion qf = new QuickUnion(Integer.parseInt(reader.readLine()));
+        PathCompression qf = new PathCompression(Integer.parseInt(reader.readLine()));
         String line;
         while((line = reader.readLine()) != null) {
             String lines[] = line.split(" ");
@@ -31,6 +31,5 @@ public class QuickUnionPilot {
         syso("done in : " + Duration.between(start, end).toMillis() + " miliseconds");
         printLine();
         syso("total connected/different components are : " + qf.count());
-        // syso(Arrays.toString(qf.elements));
     }
 }

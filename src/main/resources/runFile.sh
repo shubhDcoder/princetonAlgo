@@ -32,8 +32,14 @@ runj() {
 
     if [ $# -eq 2 ]    
         then
-            cp $2 $classesout/${package%/*}
-            echo "running with input file => " $2
+            if [ ! -f $classesout/${package%/*}/${2##*/} ]
+                then
+                    cp $2 $classesout/${package%/*}
+                    echo "copied file ${2##*/}"
+            else 
+                echo "file exists ${2##*/}"
+            fi
+            echo "running with input file => " ${2##*/}
             java -cp $classesout $suffix $2 > $DIR/${1%.*}"Output.txt"
     else 
         echo "running ${filename}"

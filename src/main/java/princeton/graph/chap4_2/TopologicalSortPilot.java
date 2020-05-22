@@ -1,7 +1,6 @@
 package princeton.graph.chap4_2;
 
 import java.io.IOException;
-import java.util.Stack;
 
 public class TopologicalSortPilot {
 
@@ -10,10 +9,10 @@ public class TopologicalSortPilot {
 
         TopologicalSort topSort = new TopologicalSort(graph.getGraph());
 
-        Stack<Integer> order = topSort.getOrder();
+        Iterable<Integer> order = topSort.getOrder();
         if(order != null) {
-            while(order.size() > 0) {
-                System.out.println(graph.getKey(order.pop()));
+            for(Integer i : order) {
+                System.out.println(graph.getKey(i));
             }
         }
     }

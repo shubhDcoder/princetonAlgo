@@ -1,10 +1,8 @@
 package princeton.graph.chap4_2;
 
-import java.util.Stack;
-
 public class TopologicalSort {
 
-    Stack<Integer> reversePostOrder;
+    Iterable<Integer> reversePostOrder;
 
     public TopologicalSort(DiGraph graph) {
         DirectedCycle cycle = new DirectedCycle(graph);
@@ -15,7 +13,7 @@ public class TopologicalSort {
         }
     }
 
-    public Stack<Integer> getOrder() {
+    public Iterable<Integer> getOrder() {
         return reversePostOrder;
     }
 

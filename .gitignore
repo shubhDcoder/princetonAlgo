@@ -1,4 +1,8 @@
 *.class
 *.iml
 /.idea/*
+.gitignore
+/src/main/resources/largeUF.txt
+/pom.xml
 /target/*
+princetonWS.*

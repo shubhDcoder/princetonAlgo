@@ -1,7 +1,5 @@
 package princeton.fundamentals.chap1_5;
 
-import static princeton.graph.chap4_1.PrintUtil.*;
-
 public class PathCompression {
   int parent[];
   int count;

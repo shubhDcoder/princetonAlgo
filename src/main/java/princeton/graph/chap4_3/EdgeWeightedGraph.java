@@ -22,12 +22,13 @@ public class EdgeWeightedGraph {
     BufferedReader reader = new BufferedReader(new FileReader(new File(fileName)));
     int totalVertex = Integer.parseInt(reader.readLine());
     EdgeWeightedGraphInit(totalVertex);
-    int totalEdge = Integer.parseInt(reader.readLine());
+    Integer.parseInt(reader.readLine());
     String line;
     while ((line = reader.readLine()) != null) {
       String split[] = line.split(" ");
       addEdge(Integer.parseInt(split[0]), Integer.parseInt(split[1]), Double.parseDouble(split[2]));
     }
+    reader.close();
   }
 
   public void addEdge(int v, int w, double weight) {
